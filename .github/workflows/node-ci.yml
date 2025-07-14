@@ -1,0 +1,32 @@
+name: CI/CD Node App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+
+    - name: Usar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Ejecutar pruebas (placeholder)
+      run: echo "Aquí irían tus pruebas"
+
+    - name: Despliegue (simulado)
+      run: echo "Aquí va el paso de despliegue si lo deseas"
