@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-	  res.send("¡Hola CI/CD con Azure!");
+	  res.send("¡Actualizado desde docker en GitHub Action y Desplegado en Azure!");
 });
 
 app.listen(port, () => {
